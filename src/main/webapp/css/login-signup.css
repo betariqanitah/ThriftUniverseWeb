@@ -1,0 +1,428 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body,
+input {
+  font-family: "Poppins", sans-serif;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  background-color: #fff;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+#userEmailError, #userPasswordError, #userMatchPasswordError, #userFullNameError, #userSIEmailError, #userSIPasswordError{
+    display: none;
+    color: red;
+}
+
+.forms-container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.login-signup {
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  left: 70%;
+  width: 50%;
+  transition: 1s 0.7s ease-in-out;
+  display: grid;
+  grid-template-columns: 1fr;
+  z-index: 5;
+}
+
+form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0rem 5rem;
+  transition: all 0.4s 0.9s;
+  overflow: hidden;
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+}
+
+form.signup-form {
+  opacity: 0;
+  z-index: 1;
+}
+
+form.login-form {
+  z-index: 2;
+}
+
+.title {
+  font-size: 2.2rem;
+  color: #BF37A7;
+  margin-bottom: 10px;
+}
+
+.input-field {
+  max-width: 380px;
+  width: 100%;
+  margin: 20px 0;
+  height: 55px;
+  border-radius: 55px;
+  border: 1px solid #BF37A7;
+  display: grid;
+  grid-template-columns: 15% 85%;
+  padding: 0 0.4rem;
+  position: relative;
+}
+
+.input-field i {
+  text-align: center;
+  line-height: 55px;
+  color: #acacac;
+  transition: 0.5s;
+  font-size: 1.1rem;
+}
+
+.input-field input {
+  background: none;
+  outline: none;
+  border: none;
+  line-height: 1;
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: #333;
+}
+
+.input-field input::placeholder {
+  color: #aaa;
+  font-weight: 500;
+}
+
+.social-media {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.social-icon {
+  height: 46px;
+  width: 46px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 0.45rem;
+  color: #BF37A7;
+  border-radius: 50%;
+  border: 1px solid #BF37A7;
+  text-decoration: none;
+  font-size: 1.1rem;
+  transition: 0.3s;
+}
+
+.social-icon:hover {
+  color: #FEE594;
+  border-color: #FEE594;
+}
+
+.btn {
+  width: 150px;
+  background-color:#BF37A7;
+  border: none;
+  outline: none;
+  height: 49px;
+  border-radius: 49px;
+  color: #FEE594;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin: 30px 0;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.btn:hover {
+  background-color: #FEE594;
+  color: #BF37A7;
+}
+
+.account-text{
+    color: #BF37A7;
+}
+
+#login-btn {
+    color: #BF37A7;
+    
+}
+
+#signup-btn {
+    color: #BF37A7;
+    
+}
+
+#signup-btn:hover{
+    color: #FEE594;
+}
+
+#login-btn:hover{
+    color: #FEE594;
+}
+
+.panels-container {
+    display: flex;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+.container:before {
+    content: "";
+    position: absolute;
+    height: 6000px;
+    width: 800px;
+    top: -10%;
+    right: 60%;
+    transform: translateY(-50%);
+    background-color: #FEE594;
+    transition: 1.8s ease-in-out;
+    z-index: 6;
+  }
+
+  .panel {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-around;
+    text-align: center;
+    z-index: 6;
+  }
+  
+  .left-panel {
+    position: relative;
+    pointer-events: all;
+    padding: 3rem 17% 2rem 12%;
+    left: -175px;
+  }
+  
+  .right-panel {
+    position: relative;
+    pointer-events: none;
+    padding: 3rem 12% 2rem 17%;
+    right: 45px;
+  }
+  
+  .panel .content {
+    color: #BF37A7;
+    transition: transform 0.9s ease-in-out;
+    transition-delay: 0.6s;
+  }
+  
+  .panel h3 {
+    font-weight: 600;
+    line-height: 1;
+    font-size: 1.5rem;
+  }
+  
+  .panel p {
+    font-size: 0.95rem;
+    padding: 0.7rem 0;
+  }
+  
+
+  .btn.transparent:hover {
+      background-color: #BF37A7;
+      color: #FEE594;
+  }
+  
+  .right-panel .content {
+    transform: translateX(800px);
+  }
+
+  /* ANIMATION */
+
+.container.sign-up-mode:before {
+    transform: translate(100%, -50%);
+    right: 42%;
+  }
+
+.container.sign-up-mode .left-panel .content {
+  transform: translateX(-800px);
+}
+
+.container.sign-up-mode .login-signup {
+  left: 29%;
+}
+
+.container.sign-up-mode form.signup-form {
+  opacity: 1;
+  z-index: 2;
+}
+
+.container.sign-up-mode form.login-form {
+  opacity: 0;
+  z-index: 1;
+}
+
+.container.sign-up-mode .right-panel .content {
+  transform: translateX(0%);
+}
+
+.container.sign-up-mode .left-panel {
+  pointer-events: none;
+}
+
+.container.sign-up-mode .right-panel {
+  pointer-events: all;
+}
+
+/* responsive */
+@media (max-width: 1100px) {
+
+    .login-signup {
+      width: 100%;
+      margin: 300px auto;
+      height: 600px;
+      transform: translate(-50%, -100%);
+    }
+  
+    .login-signup,
+    .container.sign-up-mode .login-signup {
+      left: 50%;
+    }
+  
+    .panels-container {
+      display: none;
+    }
+  
+    .container:before {
+        display: none;
+ 
+    }
+  
+    .title {
+      font-size: 2rem;
+    }
+    
+    .input-field {
+      max-width: 360px;
+      height: 54px;
+    }
+
+    .input-field i {
+      line-height: 54px;
+      font-size: 0.9rem;
+    }
+    
+    .input-field input {
+      line-height: 0.9;
+      font-weight: 500;
+      font-size: 0.9rem;
+    }
+    
+    .input-field input::placeholder {
+      font-weight: 400;
+    }
+    
+    
+    .social-media {
+      margin-bottom: 20px;
+    }
+    
+    .social-icon {
+      height: 36px;
+      width: 36px;
+      font-size: 0.9rem;
+    }
+    
+    .btn {
+      width: 150px;
+      height: 47px;
+      font-weight: 500;
+      margin: 20px 0;
+    }
+
+    .account-text{
+      font-size: 0.9rem;
+    }
+
+    #login-btn {
+      font-size: 0.9rem;
+    }
+
+    #signup-btn {
+      font-size: 0.9rem;
+    }
+
+  }
+
+  @media (max-width: 420px){
+    .title {
+      font-size: 0.9rem;
+    }
+    
+    .input-field {
+      max-width: 260px;
+      width: 230px;
+      height: 34px;
+    }
+
+    .input-field i {
+      line-height: 34px;
+      font-size: 0.8rem;
+    }
+    
+    .input-field input {
+      line-height: 34px;
+      font-weight: 400;
+      font-size: 0.8rem;
+    }
+    
+    .input-field input::placeholder {
+      font-weight: 400;
+    }
+    
+    
+    .social-media {
+      margin-bottom: 10px;
+    }
+    
+    .social-icon {
+      height: 23px;
+      width: 23px;
+      font-size: 0.5rem;
+    }
+    
+    .btn {
+      width: 140px;
+      height: 27px;
+      font-weight: 400;
+      margin: 20px 0;
+    }
+
+    .account-text{
+      font-size: 0.5rem;
+    }
+
+    #login-btn {
+      font-size: 0.5rem;
+    }
+
+    #signup-btn {
+      font-size: 0.5rem;
+    }
+
+
+  }
+  
+ 

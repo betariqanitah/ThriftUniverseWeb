@@ -1,0 +1,76 @@
+{
+  "products": [
+    {
+      "title": "Crewneck",
+      "price": "200.000",
+      "image": "./images/pic1.png",
+      "category": "featured"
+    },
+    {
+      "title": "Crewneck",
+      "price": "200.000",
+      "image": "./images/pic2.png",
+      "category": "trend"
+    },
+    {
+      "title": "Crewneck",
+      "price": "200.000",
+      "image": "./images/pic3.png",
+      "category": "featured"
+    },
+    {
+      "title": "Crewneck",
+      "price": "200.000",
+      "image": "./images/pic4.png",
+      "category": "trend"
+    },
+    {
+      "title": "Crewneck",
+      "price": "200.000",
+      "image": "./images/pic5.png",
+      "category": "featured"
+    },
+    {
+      "title": "Crewneck",
+      "price": "200.000",
+      "image": "./images/pic6.png",
+      "category": "recent"
+    },
+    {
+      "title": "Crewneck",
+      "price": "200.000",
+      "image": "./images/pic8.png",
+      "category": "latest"
+    },
+    {
+      "title": "Crewneck",
+      "price": "200.000",
+      "image": "./images/pic7.png",
+      "category": "latest"
+    },
+    {
+      "title": "Crewneck",
+      "price": "200.000",
+      "image": "./images/pic14.png",
+      "category": "recent"
+    },
+    {
+      "title": "Crewneck",
+      "price": "200.000",
+      "image": "./images/pic1.png",
+      "category": "trend"
+    },
+    {
+      "title": "Crewneck",
+      "price": "200.000",
+      "image": "./images/pic13.png",
+      "category": "latest"
+    },
+    {
+      "title": "Crewneck",
+      "price": "200.000",
+      "image": "./images/pic10.png",
+      "category": "latest"
+    }
+  ]
+}

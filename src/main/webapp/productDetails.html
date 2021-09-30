@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://kit.fontawesome.com/64d58efce2.js" crossorigin="anonymous"></script>
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="./images/favicon.png" type="image/x-icon">
+    <!-- Box icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css" />
+    
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap">
+    <!-- Glidejs -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.4.1/css/glide.core.css" />
+    
+    <!-- Custom StyleSheet -->
+    <link rel="stylesheet" href="css/home.css" />
+    <link rel="stylesheet" href="css/product-details.css" />
+    <link rel="stylesheet" href="css/featured.css" />
+    <title>Thrift Universe</title>
+</head>
+<body>
+    <!-- navbar -->
+    <nav>
+        <div class="logo">
+            <h4>Thrift Universe</h4>
+        </div>
+
+        <ul>
+          <li><a href="home.html">Home</a></li>
+                <li><a href="product.html">Product</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contactus.html">Contact</a></li>
+                <li><a href="editProfile.html">Profile</a></li>
+        </ul>
+
+        <div class="menu-toggle">
+            <input type="checkbox"/>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <!-- Product Details -->
+  <section class="section product-detail">
+    <div class="details container-md">
+      <div class="left">
+        <div class="main">
+          <img src="./images/pic1.png" alt="">
+        </div>
+        <div class="thumbnails">
+          <div class="thumbnail">
+            <img src="./images/pic2.png" alt="">
+          </div>
+          <div class="thumbnail">
+            <img src="./images/pic3.png" alt="">
+          </div>
+          <div class="thumbnail">
+            <img src="./images/pic4.png" alt="">
+          </div>
+          <div class="thumbnail">
+            <img src="./images/pic5.png" alt="">
+          </div>
+        </div>
+      </div>
+      <div class="right">
+        <span>Pants</span>
+        <h1>Long Pants</h1>
+        <div class="price">IDR200.000</div>
+
+        <form class="form">
+          <a href="product.jsp" class="addCart">Go To Product</a>
+        </form>
+        <h3>Product Detail</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero minima delectus nulla voluptates nesciunt
+          quidem laudantium, quisquam voluptas facilis dicta in explicabo, laboriosam ipsam suscipit!</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- new arrivals -->
+  <section class="section latest-products" id="new">
+    <div class="title-container">
+      <div class="section-titles">
+        <div class="section-title active" data-id="latest">
+          <h1 class="primary-title">Related Products</h1>
+        </div>
+      </div>
+    </div>
+    <div class="latest-center product-center container"></div>
+  </section>
+
+   <!-- footer -->
+   <div class="footer-container">
+    <h4>Thrift Universe</h4>
+    <div class="footer-content">
+        <p>FAQ</p>
+        <P>RETURNS</P>
+        <P>SHIPPING</P>
+        <P>CONTACT</P>
+    </div>
+    <div class="social-media">
+        <a href="#" class="social-icon">
+          <i class="fab fa-google"></i>
+        </a>
+        <a href="#" class="social-icon">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="#" class="social-icon">
+          <i class="fab fa-instagram"></i>
+        </a>
+  </div>
+  </div>
+  
+<script src="js/home.js"></script> 
+<script src="js/product.js"></script> 
+
+</body>
+</html>

@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <script src="https://kit.fontawesome.com/64d58efce2.js" crossorigin="anonymous"></script>
+        <!-- Favicon -->
+        <link rel="shortcut icon" href="./images/favicon.png" type="image/x-icon">
+        <!-- Box icons -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css" />
+        
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500&display=swap" rel="stylesheet">
+        <!-- Custom StyleSheet -->
+        <link rel="stylesheet" href="css/home.css" />
+        <link rel="stylesheet" href="css/featured.css">
+        <title>Thrift Universe</title>
+    </head>
+    <body>
+        <!-- navbar -->
+        <nav>
+            <div class="logo">
+                <h4>Thrift Universe</h4>
+            </div>
+
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="product.html">Product</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contactus.html">Contact</a></li>
+                <li><a href="editProfile.html">Profile</a></li>
+            </ul>
+
+            <div class="menu-toggle">
+                <input type="checkbox"/>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+
+        <!-- header -->
+        <div class="header-container">
+            <p class="header-title">Only<br>One For You</p>
+            <img class="header-img" src="images/headerImg.jfif">
+            <form action="product.jsp">
+              <input class="header-btn" type="submit" value="SHOP NOW"/>
+            </form>
+        </div>
+
+        <!-- services -->
+        <div class="srv-container">
+            <div class="srv-delivery">
+                <i class="fas fa-truck"></i>
+                <p>FREE DELIVERY</p>
+            </div>
+            <div class="srv-payment">
+                <i class="far fa-credit-card"></i>
+                <p>SECURE PAYMENT</p>
+            </div>
+            <div class="srv-support">
+                <i class="fas fa-headset"></i>
+                <p>24/7 SUPPORT</p>
+            </div>
+        </div>
+        <hr>
+
+      <!-- new arrivals -->
+      <section class="section latest-products" id="new">
+        <div class="title-container">
+          <div class="section-titles">
+            <div class="section-title active" data-id="latest">
+              <h1 class="primary-title">New Arrivals</h1>
+            </div>
+          </div>
+        </div>
+        <div id="newProduct" class="latest-center product-center container">
+        </div>
+      </section>
+
+      <!-- box -->
+      <div class="box-container">
+          <div class="box new">
+              <p>NEW</p>
+              <img class="img-sale" src="images/new.png" alt="">
+          </div>
+          <div class="box shop">
+            <img class="img-sale" src="images/shop.png" alt="">
+            <p>SHOP</p>
+        </div>
+        <div class="box sale">
+            <p>SALE</p>
+            <img class="img-sale" src="images/sale.png" alt="">
+        </div>
+      </div>
+
+      <!-- popular -->
+      <section class="section recent-products" id="recent">
+        <div class="title-container">
+          <div class="section-titles">
+            <div class="section-title active" data-id="recent">
+              <h1 class="primary-title">Popular Products</h1>
+            </div>
+          </div>
+        </div>
+        <div id="popProduct" class="recent-center product-center container">
+        </div>
+      </section>
+
+      <!-- quotes -->
+      <div class="quotes-container">
+          <h4 class="quotes">Good Things <br> come To Those <br> Who Thrift</h4>
+          <input class="footer-btn" type="submit" value="LET'S THRIFT"/>
+      </div>
+
+      <!-- footer -->
+      <div class="footer-container">
+        <h4>Thrift Universe</h4>
+        <div class="footer-content">
+            <p>FAQ</p>
+            <P>RETURNS</P>
+            <P>SHIPPING</P>
+            <P>CONTACT</P>
+        </div>
+        <div class="social-media">
+            <a href="#" class="social-icon">
+              <i class="fab fa-google"></i>
+            </a>
+            <a href="#" class="social-icon">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="#" class="social-icon">
+              <i class="fab fa-instagram"></i>
+            </a>
+      </div>
+      </div>
+      
+      <!-- Firebase -->
+    
+<script src="https://www.gstatic.com/firebasejs/8.6.8/firebase.js"></script>
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-analytics.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
+ <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-firestore.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-database.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+
+<script>
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  var firebaseConfig = {
+    apiKey: "AIzaSyCK98xgD_Lx3piNvgeBLxUO-WJfjhbR1x4",
+    authDomain: "thrift-universe.firebaseapp.com",
+    databaseURL: "https://thrift-universe-default-rtdb.asia-southeast1.firebasedatabase.app/",
+    projectId: "thrift-universe",
+    storageBucket: "thrift-universe.appspot.com",
+    messagingSenderId: "120173766580",
+    appId: "1:120173766580:web:a51c233322ce3e026bf4e1",
+    measurementId: "G-5MT539N1QK"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+</script>
+  
+    <script src="js/home.js"></script>
+    <script src="js/homeProduct.js"></script>
+    </body>
+</html>

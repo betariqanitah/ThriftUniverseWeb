@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <script src="https://kit.fontawesome.com/64d58efce2.js" crossorigin="anonymous"></script>
+        <link rel="shortcut icon" href="./images/favicon.png" type="image/x-icon">
+        <link rel="stylesheet" href="css/login-signup.css" />
+        <!-- Sweet Alert JavaScript -->
+    <script src="js/sweetalert2.js"></script>
+        <title>Thrift Universe</title>
+    </head>
+    <body>
+        <div class="container">
+            <div class="forms-container">
+                <div class="login-signup">
+                    <form class="login-form" method="POST" onsubmit=" return validasi()">
+                        <h2 class="title">Sign In</h2>
+                        <div class="social-media">
+                              <a href="#" class="social-icon">
+                                <i class="fab fa-google"></i>
+                              </a>
+                              <a href="#" class="social-icon">
+                                <i class="fab fa-facebook-f"></i>
+                              </a>
+                              <a href="#" class="social-icon">
+                                <i class="fab fa-instagram"></i>
+                              </a>
+                        </div>
+                        <div class="input-field">
+                            <i class="far fa-envelope"></i>
+                            <input type="email" class="form-control" id="userSIEmail" onblur="checkUserSIEmail()"placeholder="Enter your email">     
+                        </div>
+                        <small id="userSIEmailError" class="form-text text-danger">Please check your login information.</small>
+                        <div class="input-field">
+                            <i class="fas fa-lock"></i>
+                            <input type="password" class="form-control" id="userSIPassword" onblur="checkUserSIPassword()"placeholder="Enter your password">
+                        </div>
+                        <small id="userSIPasswordError" class="form-text text-danger">Please check your password.</small>
+                        <button type="button" class="btn solid" onclick="signIn()">Sign In</button>
+                        <p class="account-text">Don't have an account yet?</p>
+                        <a id="signup-btn" href="#">SIGN UP</a>
+                    </form>
+
+                    <form class="signup-form">
+                        <h2 class="title">Create Account</h2>
+                        <div class="social-media">
+                              <a href="#" class="social-icon">
+                                <i class="fab fa-google"></i>
+                              </a>
+                              <a href="#" class="social-icon">
+                                <i class="fab fa-facebook-f"></i>
+                              </a>
+                              <a href="#" class="social-icon">
+                                <i class="fab fa-instagram"></i>
+                              </a>
+                        </div>
+                        <div class="input-field">
+                            <i class="far fa-user"></i>
+                            <input type="text" class="form-control" id="userFullName" onblur="checkUserFullName()" placeholder="Enter your name">
+                       
+                        </div>
+                        <small id="userFullNameError">This Field must be filled.</small>
+                        <div class="input-field">
+                            <i class="far fa-envelope"></i>
+                            <input type="email" class="form-control" id="userEmail" onblur="checkUserEmail()" placeholder="Enter your email"/>
+                            
+                        </div>
+                        <small id="userEmailError" class="form-text text-danger">Please check your email address.</small>
+                        <div class="input-field">
+                            <i class="fas fa-lock"></i>
+                            <input type="password" class="form-control" id="userMatchPassword" onblur="checkUserPassword()" placeholder="Re-enter your password"/>
+                            
+                        </div>
+                        <small id="userMatchPasswordError" class="form-text text-danger">Your password must be uppercase, lowercase and more than 10 characters.</small>
+                        <button type="button" class="btn solid" onclick="signUp()">Sign Up</button>                       
+                        <p class="account-text">Already have an account?</p>
+                        <a id="login-btn" href="#">LOG IN</a>
+                    </form>
+                </div>
+            </div>
+
+            <div class="panels-container">
+                <div class="panel left-panel">
+                    <div class="content">
+                        <h3>Welcome Back!</h3>
+                        <p>Sign in with your email and password<br>or continue with social media</p>
+                    </div>
+                </div>
+
+                <div class="panel right-panel">
+                    <div class="content">
+                        <h3>Hello, friend!</h3>
+                        <p>Complete your profile or continue<br>with social media</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Firebase -->
+    
+<script src="https://www.gstatic.com/firebasejs/8.6.8/firebase.js"></script>
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-analytics.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
+ <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-firestore.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-database.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+
+<script>
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  var firebaseConfig = {
+    apiKey: "AIzaSyCK98xgD_Lx3piNvgeBLxUO-WJfjhbR1x4",
+    authDomain: "thrift-universe.firebaseapp.com",
+    databaseURL: "https://thrift-universe-default-rtdb.asia-southeast1.firebasedatabase.app/",
+    projectId: "thrift-universe",
+    storageBucket: "thrift-universe.appspot.com",
+    messagingSenderId: "120173766580",
+    appId: "1:120173766580:web:a51c233322ce3e026bf4e1",
+    measurementId: "G-5MT539N1QK"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+</script>
+        <script src="js/slide.js"></script>
+        <script src="js/login-signup.js"></script>
+    </body>
+</html>
